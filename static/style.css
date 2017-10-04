@@ -1,0 +1,22 @@
+body {
+  background-color: #fafafa;
+  line-height: 1.4385em;
+  overflow-x: hidden;
+  color: #5a5a5a;
+}
+
+main {
+  padding-top: 2.85rem;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.upcase {
+  text-transform: uppercase;
+}
+
+.lowcase {
+  text-transform: lowercase;
+}
