@@ -1,8 +1,17 @@
 package main
 
-import "github.com/mhale/smtpd"
+import (
+	"log"
+
+	"github.com/toby3d/go-telegram"
+)
+
+var bot *telegram.Bot
 
 func main() {
-	err := smtpd.ListenAndServe("127.0.0.1:2525", mailHandler, "TeLetterBot", "")
+	var err error
+	bot, err = telegram.NewBot(*flagToken)
 	checkError(err)
+
+	log.Printf("Connected as @%s", bot.Self.Username)
 }
