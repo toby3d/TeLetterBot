@@ -13,7 +13,7 @@ func main() {
 	bot, err = telegram.NewBot(*flagToken)
 	checkError(err)
 
-	log.Printf("Connected as @%s", bot.Self.Username)
+	log.Println("Connected as ", "@"+bot.Self.Username)
 
 	updates := bot.NewLongPollingChannel(nil)
 
